@@ -8,6 +8,7 @@
 // @icon        https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://myanimelist.net&size=64
 // @description This is my first script, but it works well. Enjoy it!
 // @description:tr İlk scriptim ama iyi çalışıyor. Keyfini çıkarın!
+// @updateURL   https://raw.githubusercontent.com/kyoyacchi/mal-expander/main/script.js
 // ==/UserScript==
 //code
 window.onload = function(){
