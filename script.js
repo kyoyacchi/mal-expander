@@ -3,22 +3,25 @@
 // @name:tr     MyAnimeList - Otomatik Modern "Hakkımda" kısmı genişletici. Mobil içinde çalışır.
 // @namespace   https://myanimelist.net/profile/kyoyatempest
 // @match       https://myanimelist.net/profile/*
-// @version     1.2
+// @grant       none
+// @version     1.6
 // @author      kyoyacchi
 // @icon        https://t3.gstatic.com/faviconV2?client=SOCIAL&type=FAVICON&fallback_opts=TYPE,SIZE,URL&url=http://myanimelist.net&size=64
-// @description This is my first script, but it works well. Enjoy it!
-// @description:tr İlk scriptim ama iyi çalışıyor. Keyfini çıkarın!
-// @updateURL   https://raw.githubusercontent.com/kyoyacchi/mal-expander/main/script.js
+// @description Auto expands the modern "about me"
+// @description:tr Modern "Hakkımda" yerini otomatik olarak genişletir.
+// @run-at     document-end
+// @grant        GM_registerMenuCommand
+//
 // ==/UserScript==
-//code
-window.onload = function(){
- let veri = document.getElementById('modern-about-me-expand-button')
- if (veri){
-   veri.click();
-  console.log("Expanded modern about me section")
- } else return;
+function Expand(){
+
+  let modern = document.getElementById('modern-about-me-expand-button')
+  if (modern) { modern.click() }
+
+}
+window.onload = function () {
+  Expand()
 }
 
 
-//
-
+GM_registerMenuCommand("Expand",Expand)
